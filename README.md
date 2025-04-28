@@ -47,7 +47,7 @@ No data are provided, though read_dominicks_data is provided to help process Dom
 Unless stated otherwise, the codebase is released under the MIT License. This covers both the codebase and any sample code in the documentation. The documentation is © Crown copyright and available under the terms of the Open Government 3.0 licence.
 
 ## Acknowledgements
-[This project structure is based on the `govcookiecutter` template
-project][govcookiecutter]. Guidance on using the govcookiecutter can be found on [this youtube video](https://www.youtube.com/watch?v=N7_d3k3uQ_M) and in the [documentation here](https://dataingovernment.blog.gov.uk/2021/07/20/govcookiecutter-a-template-for-data-science-projects/).
+This project structure is based on the `govcookiecutter` template
+project. Guidance on using the govcookiecutter can be found on [this youtube video](https://www.youtube.com/watch?v=N7_d3k3uQ_M) and in the [documentation here](https://dataingovernment.blog.gov.uk/2021/07/20/govcookiecutter-a-template-for-data-science-projects/).
 
 
