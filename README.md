@@ -19,18 +19,26 @@ Having run GEKS_initial, GEKS_arbitrary_periods extends the index decomposition 
 No data are provided, though read_dominicks_data is provided to help process Dominick's scanner data. The schema for the data to read into the decomposition functions is:
 
 ### Grouping columns
+
   consumption_segment_code: str
+  
   region_code: str
+  
   retailer: str
+  
 
 ### Alphanumetric code to identify specific products
+
   product_id: str
 
 ### Used to identify periods
+
   period: datetime64[ns, UTC]
 
 ### Price per unit of specific product
+
   price: float
 
 ### Quantity sold of speicfic product
+
   quantity: float
