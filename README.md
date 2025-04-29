@@ -16,29 +16,27 @@ Having run GEKS_initial, GEKS_arbitrary_periods extends the index decomposition 
 
 ## data
 
-No data are provided, though read_dominicks_data is provided to help process Dominick's scanner data. The schema for the data to read into the decomposition functions is:
+No data are provided, though read_dominicks_data is provided to help process Dominick's scanner data. The schema for the data to read into the decomposition functions is:s
 
-### Grouping columns
-
-  consumption_segment_code: str
+  consumption_segment_code: str, grouping column
   
-  region_code: str
+  region_code: str, grouping column
   
-  retailer: str
-  
+  retailer: str, grouping column
 
-### Alphanumetric code to identify specific products
+  product_id: str, alphanumetric code to identify specific products
 
-  product_id: str
+  period: datetime64[ns, UTC], used to identify distinct time periods
 
-### Used to identify periods
+  price: float, price per unit of specific product
 
-  period: datetime64[ns, UTC]
+  quantity: float, quantity sold of speicfic product
 
-### Price per unit of specific product
+## Licence
+Unless stated otherwise, the codebase is released under the MIT License. This covers both the codebase and any sample code in the documentation. The documentation is © Crown copyright and available under the terms of the Open Government 3.0 licence.
 
-  price: float
+## Acknowledgements
+[This project structure is based on the `govcookiecutter` template](https://github.com/best-practice-and-impact/govcookiecutter)
+project. Guidance on using the govcookiecutter can be found on [this youtube video](https://www.youtube.com/watch?v=N7_d3k3uQ_M) and in the [documentation here](https://dataingovernment.blog.gov.uk/2021/07/20/govcookiecutter-a-template-for-data-science-projects/).
 
-### Quantity sold of speicfic product
 
-  quantity: float
