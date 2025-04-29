@@ -4,8 +4,8 @@ from GEKS_decomp_functions import *
 
 # read in input file
 # update input file path
-data_file, first_date = read_dominicks_data("D:\Dominicks\Oatmeal\woat", start_period="1992-01-01")
-master_contrib_file = read_master_contributions("D:\Dominicks\Oatmeal")
+data_file, first_date = read_dominicks_data("your\path\Dominicks\Oatmeal\woat", start_period="1992-01-01")
+master_contrib_file = read_master_contributions("your\path\Dominicks\Oatmeal")
 
 # determine last month calcalcuted from previous GEKS_initial run
 master_contrib_file["period"] = pd.to_datetime(master_contrib_file["period"])
@@ -87,4 +87,4 @@ master_contrib = master_contrib.drop(["time_count"], axis=1)
 master_contrib = master_contrib[master_contrib.period.between(pd.to_datetime(contrib_range[0], utc=True), data_end)]
 
 # write output
-master_contrib_file = write_master_contributions(master_contrib, "D:\Dominicks\Oatmeal", append=True)
+master_contrib_file = write_master_contributions(master_contrib, "your\path\Dominicks\Oatmeal", append=True)
