@@ -4,7 +4,7 @@ from GEKS_decomp_functions import *
 
 # determine first period from input data
 # specify folder with inputs and desired start_period (YYYY-MM-DD format)
-data_in, first_date = read_dominicks_data("D:\Dominicks\Oatmeal\woat", start_period="1992-01-01")
+data_in, first_date = read_dominicks_data("your\path\Dominicks\Oatmeal\woat", start_period="1992-01-01")
 
 window_length = 25
 
@@ -40,10 +40,7 @@ master_contrib = init_window_decomp(data_in, month_vector, window_length, groupi
 # some column edits to for required schemas etc.
 master_contrib = master_contrib.rename(columns={"time_count": "period"})
 master_contrib["period"] = first_date + master_contrib["period"].apply(lambda x: pd.DateOffset(months=x))
-#master_contrib["period"] = master_contrib["period"].dt.strftime('%Y-%m-%d')
-#master_contrib["period"] = pd.to_datetime(master_contrib["period"]).dt.tz_localize('UTC')
 
 # write output
 # set append to False to overwrite file
-
-master_contrib_file = write_master_contributions(master_contrib, "D:\Dominicks\Oatmeal", append=False)
+master_contrib_file = write_master_contributions(master_contrib, "your\path\Dominicks\Oatmeal", append=False)
