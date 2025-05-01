@@ -1,6 +1,6 @@
 # GEKS decomposition code
 
-This repo contains the code that accompanies the paper "Practical decomposition of mean-spliced on published indices" by T Liu. It allows a multiplicative decomposition of the GEKS-Törnqvist index, breaking each elementary aggregate down based on product ID. When provided with groupings column it can calculate decompositions across multiple elementary aggregates at once. 
+This repo contains the code that accompanies the paper ["Practical decomposition of mean-spliced on published indices"](https://unece.org/sites/default/files/2025-04/geneva%20paper.pdf) by T Liu. It allows a multiplicative decomposition of the GEKS-Törnqvist index, breaking each elementary aggregate down based on product ID. When provided with groupings column it can calculate decompositions across multiple elementary aggregates at once. 
 
 ## GEKS_decomp_functions.py
 
