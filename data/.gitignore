@@ -1,0 +1,4 @@
+# Disregard all files, as this is the data folder
+*
+# need to keep the gitignore 
+!.gitignore

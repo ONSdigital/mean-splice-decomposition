@@ -286,7 +286,7 @@ def init_window_decomp(data_in, month_vector, window_length, grouping_cols, thre
 
 
 
-def read_dominicks_data(data_folder, start_period=None):
+def read_dominicks_data(data_folder, movement_file, upc_file, start_period=None):
     """
     Code that reads and processes Dominick's data from multiple CSV files, merges them, and prepares the data for further analysis.
     The function loads data from the specified folder, merges it based on common columns, and performs necessary transformations
@@ -296,6 +296,10 @@ def read_dominicks_data(data_folder, start_period=None):
     ----------
     data_folder: str
         Path to the folder containing the CSV files.
+    movement_file: str
+        Name of the movement file with the sales information
+    upc_file: str
+        Name of the upc file with the description of each UPC in the category
     start_period: str, optional
         The starting period to use for the data. If None, the earliest date in the data will be used.
 
@@ -309,8 +313,8 @@ def read_dominicks_data(data_folder, start_period=None):
     """
 
     # Load Dominick's data
-    dominicks_movement = os.path.join(data_folder, 'WOAT.csv')
-    dominicks_upc = os.path.join(data_folder, 'upcoat.csv')
+    dominicks_movement = os.path.join(data_folder, movement_file)
+    dominicks_upc = os.path.join(data_folder, upc_file)
     dominicks_stores = os.path.join(data_folder, 'dominicks_stores.csv')
     dominicks_weeks = os.path.join(data_folder, 'dominicks_weeks.csv')
 
